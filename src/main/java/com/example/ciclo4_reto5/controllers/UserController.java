@@ -1,12 +1,12 @@
-package com.example.ciclo4_reto4.controllers;
+package com.example.ciclo4_reto5.controllers;
 
 
 import java.util.List;
 import java.util.Optional;
 
 
-import com.example.ciclo4_reto4.models.User;
-import com.example.ciclo4_reto4.services.UserService;
+import com.example.ciclo4_reto5.models.User;
+import com.example.ciclo4_reto5.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -64,7 +64,12 @@ public class UserController {
     public User authenticateUser(@PathVariable("email") String email, @PathVariable("password") String password) {
         return userService.authenticateUser(email, password);
     }
-    
+
+    @GetMapping("/birthday/{month}")
+    public List<User> birthtDayList(@PathVariable("month") String monthBirthtDay) {
+        return userService.birthtDayList(monthBirthtDay);
+    }
+
     @GetMapping("/emailexist/{email}")
     public boolean emailExists(@PathVariable("email") String email) {
         return userService.emailExists(email);

@@ -1,8 +1,8 @@
-package com.example.ciclo4_reto4.services;
+package com.example.ciclo4_reto5.services;
 
 
-import com.example.ciclo4_reto4.models.Supplements;
-import com.example.ciclo4_reto4.repositories.SupplementsRepository;
+import com.example.ciclo4_reto5.models.Supplements;
+import com.example.ciclo4_reto5.repositories.SupplementsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,6 +60,14 @@ public class SupplementsService {
 
     }
 
+    public List<Supplements> productByPrice(double precio) {
+        return supplementsRepository.productByPrice(precio);
+    }
+
+
+    public List<Supplements> findByDescriptionLike(String description) {
+        return supplementsRepository.findByDescriptionLike(description);
+    }
 
 
 

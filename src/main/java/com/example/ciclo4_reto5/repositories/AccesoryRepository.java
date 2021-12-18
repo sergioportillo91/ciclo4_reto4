@@ -1,10 +1,10 @@
-package com.example.ciclo4_reto4.repositories;
+package com.example.ciclo4_reto5.repositories;
 import java.util.List;
 import java.util.Optional;
 
 
-import com.example.ciclo4_reto4.models.Accessory;
-import com.example.ciclo4_reto4.repositories.crud.AccessoryCrudRepository;
+import com.example.ciclo4_reto5.models.Accessory;
+import com.example.ciclo4_reto5.repositories.crud.AccessoryCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

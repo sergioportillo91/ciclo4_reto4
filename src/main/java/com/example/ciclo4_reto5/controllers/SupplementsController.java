@@ -1,9 +1,9 @@
-package com.example.ciclo4_reto4.controllers;
+package com.example.ciclo4_reto5.controllers;
 
 
 
-import com.example.ciclo4_reto4.models.Supplements;
-import com.example.ciclo4_reto4.services.SupplementsService;
+import com.example.ciclo4_reto5.models.Supplements;
+import com.example.ciclo4_reto5.services.SupplementsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +38,18 @@ public class SupplementsController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") String id){
         return supplementsService.delete(id);
+    }
+
+
+    @GetMapping("/price/{price}")
+    public List<Supplements> productByPrice(@PathVariable("price") double precio) {
+        return supplementsService.productByPrice(precio);
+    }
+
+
+    @GetMapping("/description/{description}")
+    public List<Supplements> findByDescriptionLike(@PathVariable("description") String description){
+        return supplementsService.findByDescriptionLike(description);
     }
 
 }

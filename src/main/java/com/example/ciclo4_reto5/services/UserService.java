@@ -1,8 +1,8 @@
-package com.example.ciclo4_reto4.services;
+package com.example.ciclo4_reto5.services;
 
 
-import com.example.ciclo4_reto4.models.User;
-import com.example.ciclo4_reto4.repositories.UserRepository;
+import com.example.ciclo4_reto5.models.User;
+import com.example.ciclo4_reto5.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -113,5 +113,9 @@ public class UserService {
         } else {
             return usuario.get();
         }
+    }
+
+    public List<User> birthtDayList(String monthBirthtDay) {
+        return userRepository.birthtDayList(monthBirthtDay);
     }
 }

@@ -1,8 +1,8 @@
-package com.example.ciclo4_reto4.repositories;
+package com.example.ciclo4_reto5.repositories;
 
 
-import com.example.ciclo4_reto4.models.User;
-import com.example.ciclo4_reto4.repositories.crud.UserCrudRepository;
+import com.example.ciclo4_reto5.models.User;
+import com.example.ciclo4_reto5.repositories.crud.UserCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import java.util.List;
@@ -51,5 +51,9 @@ public class UserRepository {
     
     public Optional<User> lastUserId(){
         return userCrudRepository.findTopByOrderByIdDesc();
+    }
+
+    public List<User> birthtDayList(String monthBirthtDay) {
+        return userCrudRepository.findByMonthBirthtDay(monthBirthtDay);
     }
 }
