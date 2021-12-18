@@ -1,11 +1,11 @@
-package com.example.ciclo4_reto4.controllers;
+package com.example.ciclo4_reto5.controllers;
 
 import java.util.List;
 import java.util.Optional;
 
 
-import com.example.ciclo4_reto4.models.Accessory;
-import com.example.ciclo4_reto4.services.AccessoryService;
+import com.example.ciclo4_reto5.models.Accessory;
+import com.example.ciclo4_reto5.services.AccessoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;

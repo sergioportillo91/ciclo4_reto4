@@ -1,4 +1,4 @@
-package com.example.ciclo4_reto4.models;
+package com.example.ciclo4_reto5.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "supplements")
+@Document(collection = "accessories")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Supplements {
+public class Accessory {
     @Id
     private String reference;
     private String brand;
@@ -22,3 +22,4 @@ public class Supplements {
     private int quantity;
     private String photography;
 }
+

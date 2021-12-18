@@ -1,8 +1,8 @@
-package com.example.ciclo4_reto4.repositories;
+package com.example.ciclo4_reto5.repositories;
 
 
-import com.example.ciclo4_reto4.models.Supplements;
-import com.example.ciclo4_reto4.repositories.crud.SupplementsCrudRepository;
+import com.example.ciclo4_reto5.models.Supplements;
+import com.example.ciclo4_reto5.repositories.crud.SupplementsCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,11 +18,9 @@ public class SupplementsRepository {
     public List<Supplements> getAll() {
         return (List<Supplements>) supplementsCrudRepository.findAll();
     }
-
     public Optional<Supplements> getReference(String reference) {
         return supplementsCrudRepository.findById(reference);
     }
-
     public Supplements save(Supplements supplements){
         return supplementsCrudRepository.save(supplements);
     }
@@ -31,6 +29,15 @@ public class SupplementsRepository {
     }
     public void delete(Supplements supplements){
         supplementsCrudRepository.delete(supplements);
+    }
+
+    public List<Supplements> productByPrice(double precio) {
+        return supplementsCrudRepository.findByPriceLessThanEqual(precio);
+    }
+
+    //Reto 5
+    public List<Supplements> findByDescriptionLike(String description) {
+        return supplementsCrudRepository.findByDescriptionLike(description);
     }
 
 
